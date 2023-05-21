@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-mongoose.connect(process.env.Mongo_url,{
+mongoose.connect('mongodb+srv://gogoiroktim:Gandhi213@cluster0.cl7jchy.mongodb.net/ChatDB?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(()=>{

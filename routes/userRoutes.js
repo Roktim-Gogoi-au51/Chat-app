@@ -36,7 +36,7 @@ router.post('/login',async(req,res) => {
                 return res.json({message:'Wrong Password', status:false})
             }
             delete user.password
-            const token = jwt.sign({ username: user.username,  isAvatar: user.isAvatar }, process.env.Secret_key);
+            const token = jwt.sign({ username: user.username,  isAvatar: user.isAvatar }, 'cbsdcabvkjbvidufgvav321654avgdvkb654svjgavsd');
             res.status(200).json({
                 token: token,
                 status: true,
